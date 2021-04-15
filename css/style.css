@@ -1,0 +1,136 @@
+:root {
+  --color-imdb: #e2b616;
+  --color-rt: #fa320a;
+  --color-muted: #525f7f;
+  --color-hover-imdb: #5f5437;
+  --color-hover-rt: #672c34;
+}
+
+.imdb {
+  color: var(--color-imdb);
+}
+
+.rt {
+  color: var(--color-rt);
+}
+
+.container-fluid {
+}
+
+.card {
+  height: calc(100% - 30px);
+}
+
+.category {
+  text-transform: initial;
+}
+
+.filter-stat span {
+  color: var(--primary);
+}
+
+.chart-area {
+  width: 100%;
+  height: 320px;
+  position: relative;
+}
+
+.chart-area svg {
+  display: block;
+  width: 100%;
+}
+
+.chart-area text {
+  font-size: 0.625rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.chart-area .axis text {
+  font-family: inherit;
+  fill: #ced4da;
+}
+
+.chart-area .axis line,
+.chart-area .axis path,
+.chart-area .zero-line {
+  stroke: #525f7f;
+}
+
+.chart-area .axis-y path {
+  display: none;
+}
+
+.chart-area .axis-title {
+  text-transform: uppercase;
+}
+
+.chart-area .tooltip-trigger {
+  fill: #27293d;
+}
+
+.chart-area .imdb .tooltip-trigger:hover {
+  fill: var(--color-hover-imdb);
+}
+
+.chart-area .rt .tooltip-trigger:hover {
+  fill: var(--color-hover-rt);
+}
+
+.chart-area .muted {
+  color: var(--color-muted);
+}
+
+.chart-area .muted .tooltip-trigger,
+.chart-area .tooltip-trigger.muted {
+  pointer-events: none;
+}
+
+.chart-area .filter-trigger {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.chart-area .filter-trigger:hover {
+  fill: #fff;
+}
+
+.chart-area .filter-trigger.muted {
+  fill: var(--color-muted);
+}
+
+.chart-tooltip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.75rem;
+  color: hsla(0, 0%, 100%, 0.8);
+  background-color: #27293d;
+  border-radius: 0.2857rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #525f7f;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12) !important;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.chart-tooltip.is-visible {
+  opacity: 1;
+}
+
+.dataTables_wrapper,
+.dataTables_wrapper label {
+  color: hsla(0, 0%, 100%, 0.8);
+  font-size: 0.75rem;
+}
+
+table.dataTable tbody td {
+  vertical-align: top;
+}
+
+.dataTables_wrapper .page-link {
+  padding: 4px 14px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
