@@ -149,15 +149,26 @@ function renderRunTimeChart(id, dimension, group, dispatch) {
       .join((enter) =>
         enter
           .append("g")
-          .attr("class", (d) => `tooltip-trigger box-g ${d[2]}`)
+          .attr("class", (d) => `box-g ${d[2]}`)
           .attr("stroke", "currentColor")
           .attr("stroke-width", strokeWidth)
           .attr("fill", "none")
-          .on("mouseenter", function (event, d) {
-            const key = d[2];
-            const runtime = d[0];
-            const boxValues = d[1];
-            const content = `
+          .call((g) =>
+            g
+              .append("path")
+              .attr("class", "box-range-path")
+              .attr("d", rangePath)
+          )
+          .call((g) =>
+            g
+              .append("path")
+              .attr("class", "box-iqr-path tooltip-trigger")
+              .attr("d", iqrPath)
+              .on("mouseenter", function (event, d) {
+                const key = d[2];
+                const runtime = d[0];
+                const boxValues = d[1];
+                const content = `
               <div class="${key}">${key.toUpperCase()}</div>
               <div>Runtime: ${runtime}</div>
               <div>Max rating: ${d3.format(".1f")(boxValues.range[1])}</div>
@@ -172,18 +183,10 @@ function renderRunTimeChart(id, dimension, group, dispatch) {
               )}</div>
               <div>Min rating: ${d3.format(".1f")(boxValues.range[0])}</div>
             `;
-            tooltip.show(content);
-          })
-          .on("mouseleave", tooltip.hide)
-          .on("mousemove", tooltip.move)
-          .call((g) =>
-            g
-              .append("path")
-              .attr("class", "box-range-path")
-              .attr("d", rangePath)
-          )
-          .call((g) =>
-            g.append("path").attr("class", "box-iqr-path").attr("d", iqrPath)
+                tooltip.show(content);
+              })
+              .on("mouseleave", tooltip.hide)
+              .on("mousemove", tooltip.move)
           )
           .call((g) =>
             g
