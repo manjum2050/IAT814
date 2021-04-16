@@ -20,7 +20,7 @@
 #### Install Dependencies:
   - run the command in the terminal: *npm install*
 
-#### Run the application:
+### Run the application:
   - start the node server using the command: *node server*
   
   - Once the server is started, you can use port 8080 to access the application through index.html file: http://localhost:8080/index.html
