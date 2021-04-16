@@ -134,3 +134,8 @@ table.dataTable tbody td {
   margin-top: 4px;
   margin-bottom: 4px;
 }
+
+.data_download {
+  color: #e14eca;
+  font-size: 14px;
+}
