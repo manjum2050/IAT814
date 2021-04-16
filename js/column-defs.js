@@ -102,25 +102,5 @@ const columnDefs = {
     value: (d) => +d.popularity,
     className: "text-right",
     render: $.fn.dataTable.render.number(",", ".", 1),
-  },
-  // numberOfLanguages: {
-  //   title: "Number of Languages",
-  //   value: (d) => +d.num_language,
-  // },
-  // usVotersRating: {
-  //   title: "US Voters Rating",
-  //   value: (d) => +d.us_voters_rating,
-  // },
-  // nonUSVotersRating: {
-  //   title: "Non-US Voters Rating",
-  //   value: (d) => +d.non_us_voters_rating,
-  // },
-  // malesRating: {
-  //   title: "Males Rating",
-  //   value: (d) => +d.males_rating,
-  // },
-  // femalesRating: {
-  //   title: "Females Rating",
-  //   value: (d) => +d.females_rating,
-  // },
+  }
 };
