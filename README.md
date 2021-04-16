@@ -23,5 +23,4 @@
 #### Run the application:
   - start the node server using the command: *node server*
   
-  - Once the server is started, you can use port 8080 to access the application through index.html file 
-  http://localhost:8080/index.html
+  - Once the server is started, you can use port 8080 to access the application through index.html file: http://localhost:8080/index.html
