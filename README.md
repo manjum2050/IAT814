@@ -19,6 +19,7 @@
 
 #### Install Dependencies:
   - run the command in the terminal: *npm install*
+  - run the command: npm install connect
 
 ### Run the application:
   - start the node server using the command: *node server*
