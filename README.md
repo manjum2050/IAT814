@@ -18,7 +18,7 @@
   - We recommend you that you install NVM (node version manager) to allow you run and support multiple versions of node here (https://github.com/nvm-sh/nvm/releases)
 
 #### Install Dependencies:
-#### run the commands in the terminal:
+##### run the following commands in the terminal:
   -  *npm install*
   -  *npm install connect*
   -  *npm install serve-static*
