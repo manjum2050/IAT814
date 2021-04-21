@@ -3,4 +3,5 @@ var connect = require('connect');
 
  connect()
      .use(serveStatic(__dirname))
-     .listen(8080, () => console.log('Server running on 8080...')); // change the port number if 8080 is busy.
+     .listen(process.env.PORT || 8080, () => console.log('Server running on 8080...')); // change the port number if 8080 is busy.
+
