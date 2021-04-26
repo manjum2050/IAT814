@@ -1,5 +1,11 @@
 # IAT814
 
+## Dashboard 🔗
+https://iat814-team6-dashboard.herokuapp.com/
+
+## Proposal & Demo (Youtube) 🔗
+https://youtu.be/SdKLSgdzCaQ
+
 ### Folder/File structure
 
 #### data: contains the data file in csv format.
