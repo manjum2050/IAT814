@@ -1,5 +1,8 @@
 # IAT814
 
+ ### Project Report:
+ [Report](IAT Project report readme.txt)
+
 ## Dashboard 🔗
 https://iat814-team6-dashboard.herokuapp.com/
 
